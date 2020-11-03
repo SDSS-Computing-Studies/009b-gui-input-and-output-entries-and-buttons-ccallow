@@ -18,8 +18,21 @@ from tkinter import *
 win = tk.Tk()
 win.title("Factoring Trinomials")
 
-a  = Label (win, text = "x^2")
+#textvaribles
+binput = StringVar()
+binput.set("_")
+cinput = StringVar()
+cinput.set("_")
 
-a.grid(row = 1, column = 1)
+#interface
+instructions = Label (win, text = "Today we are going to factor trinomials. \nEnter two values for the b-coefficient and c-coefficient ", )
+
+a = Label (win, text = "x^2")
+bentry = Entry (win, textvariable = binput)
+
+#grid
+instructions.grid(row = 1, column = 1, columnspan = 2, rowspan = 2, sticky = W)
+a.grid(row = 3, column = 1)
+
 
 win.mainloop()
