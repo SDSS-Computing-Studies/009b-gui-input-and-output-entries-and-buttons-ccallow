@@ -11,6 +11,7 @@ import tkinter as tk
 from tkinter import *
 
 win = tk.Tk()
+win.title("Madlibs")
 
 def clickStory():
     a = Adj1.get()
@@ -23,7 +24,7 @@ def clickStory():
     d = str(d)
     e = Adj3.get()
     e = str(e)
-    f = Noun.get()
+    f = Noun1.get()
     f = str(f)
     g = Fam.get()
     g = str(g)
@@ -43,7 +44,7 @@ def clickStory():
 
     
 eoutput = StringVar()
-eoutput.set("Finished Story goes here")
+eoutput.set("Finished story goes here")
 
 #text variables for inputs
 labelFam = StringVar()
@@ -55,19 +56,19 @@ labelFood2 = StringVar()
 labelFood2.set("Food")
 
 labelAdj = StringVar()
-labelAdj.set =("Adjective")
+labelAdj.set("Adjective")
 labelAdj2 = StringVar()
-labelAdj2.set =("Adjective")
+labelAdj2.set("Adjective")
 labelAdj3 = StringVar()
-labelAdj3.set =("Adjective")
+labelAdj3.set("Adjective")
 labelAdj4 = StringVar()
-labelAdj4.set =("Adjective")
+labelAdj4.set("Adjective")
 
 labelVerb1 = StringVar()
-labelVerb1.set =("Verb")
+labelVerb1.set ("Verb")
 
 labelNoun = StringVar()
-labelNoun.set =("Noun-plural")
+labelNoun.set("Plural Noun (ends in s)")
 
 #text code - adj
 label1 = Label(win, text = "Enter four adjectives:")
@@ -88,7 +89,7 @@ Food2 = Entry (win, textvariable=labelFood2)
 #remainder of code
 label4 = Label(win, text = "Enter a plural noun")
 label5 = Label(win, text = "Enter a family member:")
-Noun = Entry(win, textvariable = labelNoun)
+Noun1 = Entry(win, textvariable = labelNoun)
 Fam = Entry(win, textvariable = labelFam)
 button1 = Button(win, text = "Show me the story!", command = clickStory)
 a_label = Label(win, text = "Here is your story: ")
@@ -109,13 +110,13 @@ Food1.grid(row = 4, column =2)
 Food2.grid(row = 4, column = 3)
 #noun and family
 label4.grid(row = 5, column = 1, sticky = W)
-Noun.grid(row =5, column = 2)
+Noun1.grid(row =5, column = 2)
 label5.grid(row = 6, column = 1, sticky = W)
 Fam.grid(row = 6, column = 2)
 #remainder
-button1.grid(row = 6, column = 2, columnspan = 2)
-a_label.grid(row =7, column = 1, sticky = W)
-a_entry.grid(row = 8, column = 1, columnspan = 3, sticky = W)
+button1.grid(row = 7, column = 2 )
+a_label.grid(row = 8, column = 1, sticky = W)
+a_entry.grid(row = 9, column = 1, columnspan = 3, sticky = W)
 
 
 
