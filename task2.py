@@ -20,19 +20,35 @@ win.title("Factoring Trinomials")
 
 #textvaribles
 binput = StringVar()
-binput.set("_")
+binput.set("")
 cinput = StringVar()
-cinput.set("_")
+cinput.set("")
 
-#interface
-instructions = Label (win, text = "Today we are going to factor trinomials. \nEnter two values for the b-coefficient and c-coefficient ", )
+#instructions
+inst1 = Label (win, text = "Today we are going to factor trinomials. \n 1. Enter two values for the b-coefficient and c-coefficient. \n 2. Hit the factor button and the answer will appear. \n *** If you want to make the b or c values negative, remember a negative sign.***", anchor = W, justify = LEFT)
+inst2  = Label (win, text  = "1. Enter two values for the b-coefficient and c-coefficient.")
+inst3 = Label (win, text = "2. Hit the factor button and the answer will appear.")
+instNote = Label(win, text  = "*** If you want to make the b or c values negative, remember a negative sign.***" )
+entry = Label(win, text = "Enter your values:")
 
-a = Label (win, text = "x^2")
-bentry = Entry (win, textvariable = binput)
+#entry boxes
+a = Label (win, text = "x^2 +")
+bentry = Entry (win, textvariable = binput, width = 5)
+b = Label (win, text = "x")
+centry = Label (win, textvariable = cinput, width = 5)
 
-#grid
-instructions.grid(row = 1, column = 1, columnspan = 2, rowspan = 2, sticky = W)
-a.grid(row = 3, column = 1)
+#grid for instructions
+inst1.grid(row = 1, column = 1, columnspan = 15)
+#inst2.grid(row = 2, column = 1, columnspan = 6, sticky = W)
+#inst3.grid(row = 3, column = 1, columnspan = 5, sticky = W)
+#instNote.grid(row = 4, column = 1, columnspan= 8, sticky = W)
+entry.grid( row = 5, column = 1, columnspan = 2, sticky = W)
+
+#grid for code
+a.grid(row = 6, column = 1, sticky = E)
+bentry.grid(row = 6, column = 2, sticky = W)
+b.grid(row = 6, column = 3, sticky = E)
+centry.grid (row = 6, column = 4, sticky = W)
 
 
 win.mainloop()
