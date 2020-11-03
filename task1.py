@@ -12,7 +12,7 @@ from tkinter import *
 
 win = tk.Tk()
 win.title("Madlibs")
-win.geometry("550x275")
+win.geometry("575x260")
 
 def clickStory():
     a = Adj1.get()
@@ -33,10 +33,10 @@ def clickStory():
     h = str(h)
     i = Adj4.get()
     i = str(i)
-    line1 = "Our school cafeteria has really " + a + " food. Just thinking about it makes my stomach " + b +" ."
+    line1 = "Our school cafeteria has really " + a + " food. Just thinking about it makes my stomach " + b +"."
     line2 =  "The spaghetti is " + c +" and tastes like " + d + ". The turkey tacos are totally " + e + " and they look"
     line3 =  "like old " + f + ". My " + g + "said that they would make my lunches, but on the first day,"
-    line4 = "I got a sandwich made of " + h + ". I think I'd rather take my chances with the " + i+ "cafeteria!"
+    line4 = "I got a sandwich made of " + h + ". I think I'd rather take my chances with the " + i+ " cafeteria!"
     a_entry.delete(0,END)
     b_entry.delete(0,END)
     c_entry.delete(0, END)
@@ -98,10 +98,10 @@ Noun1 = Entry(win, textvariable = labelNoun)
 Fam = Entry(win, textvariable = labelFam)
 button1 = Button(win, text = "Show me the story!", command = clickStory)
 a_label = Label(win, text = "Here is your story: ")
-a_entry = Entry(win, width = 95, textvariable=eoutput, relief = FLAT)
-b_entry = Entry(win, width = 95, relief = FLAT)
-c_entry = Entry(win, width = 95, relief = FLAT)
-d_entry= Entry(win, width = 95, relief = FLAT)
+a_entry = Entry(win, width = 90, textvariable=eoutput, relief = FLAT)
+b_entry = Entry(win, width = 90, relief = FLAT)
+c_entry = Entry(win, width = 90, relief = FLAT)
+d_entry= Entry(win, width = 90, relief = FLAT)
 
 #adjectives code
 label1.grid(row = 1, column = 1, sticky = W)
