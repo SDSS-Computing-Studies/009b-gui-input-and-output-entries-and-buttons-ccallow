@@ -12,6 +12,7 @@ from tkinter import *
 
 win = tk.Tk()
 win.title("Madlibs")
+win.geometry("500x300")
 
 def clickStory():
     a = Adj1.get()
@@ -32,15 +33,18 @@ def clickStory():
     h = str(h)
     i = Adj4.get()
     i = str(i)
-    line1 = "Our school cafeteria has really " + a + " food. Just thinking about it makes"
-    line2 = "my stomach " + b + ". The spaghetti is " + c +"and tastes like " + d + "The turkey"
-    line3 = "tacos are totally " + e + " and they look like old " + f + ". My " + g
-    line4 = " said that they would make my lunches, but on the first day , I got a"
-    line5 =  "sandwich made of "+ h + "and mayo. I think I'd rather take my chances with"
-    line6 = "the " + i + "cafeteria!"
-    story = line1 + "\n" + line2 + "\n" + line3 + "\n" +line4 + "\n"+ line5 +"\n" + line6
+    line1 = "Our school cafeteria has really " + a + " food. Just thinking about it makes my stomach" + b+ +"."
+    line2 =  "The spaghetti is " + c +" and tastes like " + d + ". The turkey tacos are totally" + e
+    line3 =  " and they look like old " + f + ". My " + g + "said that they would make my lunches, but on the first"
+    line4 = "day, I got a sandwich made of " + h + ". I think I'd rather take my chances with the " + i+ "cafeteria!"
     a_entry.delete(0,END)
-    a_entry.insert(0, story)
+    b_entry.delete(0,END)
+    c_entry.delete(0, END)
+    d_entry.delete(0, END)
+    a_entry.insert(0, line1)
+    b_entry.insert(0, line2)
+    c_entry.insert(0, line3)
+    d_entry.insert(0, line4)
 
     
 eoutput = StringVar()
@@ -86,6 +90,7 @@ label3 = Label(win, text = "Enter two types of food:")
 Food1 = Entry (win, textvariable=labelFood1)
 Food2 = Entry (win, textvariable=labelFood2)
 
+
 #remainder of code
 label4 = Label(win, text = "Enter a plural noun")
 label5 = Label(win, text = "Enter a family member:")
@@ -93,7 +98,10 @@ Noun1 = Entry(win, textvariable = labelNoun)
 Fam = Entry(win, textvariable = labelFam)
 button1 = Button(win, text = "Show me the story!", command = clickStory)
 a_label = Label(win, text = "Here is your story: ")
-a_entry = Entry(win, width = 75, textvariable=eoutput)
+a_entry = Entry(win, width = 80, textvariable=eoutput, relief = FLAT)
+b_entry = Entry(win, width = 80, relief = FLAT)
+c_entry = Entry(win, width = 80, relief = FLAT)
+d_entry= Entry(win, width = 80, relief = FLAT)
 
 #adjectives code
 label1.grid(row = 1, column = 1, sticky = W)
@@ -115,8 +123,11 @@ label5.grid(row = 6, column = 1, sticky = W)
 Fam.grid(row = 6, column = 2)
 #remainder
 button1.grid(row = 7, column = 2 )
-a_label.grid(row = 8, column = 1, sticky = W)
-a_entry.grid(row = 9, column = 1, columnspan = 3, sticky = W)
+a_label.grid(row = 8, column = 1)
+a_entry.grid(row = 9, column = 1, columnspan = 5)
+b_entry.grid(row = 10, column = 1, columnspan = 5)
+c_entry.grid(row = 11, column = 1, columnspan = 5)
+d_entry.grid(row = 12, column = 1, columnspan = 5)
 
 
 
