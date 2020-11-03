@@ -12,3 +12,14 @@ The program should display the factored form in an Entry widget.
 Extension: make the + between a,b and b,c buttons that will toggle
 between + and -.
 """
+import tkinter as tk 
+from tkinter import *
+
+win = tk.Tk()
+win.title("Factoring Trinomials")
+
+a  = Label (win, text = "x^2")
+
+a.grid(row = 1, column = 1)
+
+win.mainloop()
