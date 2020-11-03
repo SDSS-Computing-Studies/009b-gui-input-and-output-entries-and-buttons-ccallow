@@ -12,7 +12,7 @@ from tkinter import *
 
 win = tk.Tk()
 win.title("Madlibs")
-win.geometry("500x300")
+win.geometry("550x275")
 
 def clickStory():
     a = Adj1.get()
@@ -33,10 +33,10 @@ def clickStory():
     h = str(h)
     i = Adj4.get()
     i = str(i)
-    line1 = "Our school cafeteria has really " + a + " food. Just thinking about it makes my stomach" + b+ +"."
-    line2 =  "The spaghetti is " + c +" and tastes like " + d + ". The turkey tacos are totally" + e
-    line3 =  " and they look like old " + f + ". My " + g + "said that they would make my lunches, but on the first"
-    line4 = "day, I got a sandwich made of " + h + ". I think I'd rather take my chances with the " + i+ "cafeteria!"
+    line1 = "Our school cafeteria has really " + a + " food. Just thinking about it makes my stomach " + b +" ."
+    line2 =  "The spaghetti is " + c +" and tastes like " + d + ". The turkey tacos are totally " + e + " and they look"
+    line3 =  "like old " + f + ". My " + g + "said that they would make my lunches, but on the first day,"
+    line4 = "I got a sandwich made of " + h + ". I think I'd rather take my chances with the " + i+ "cafeteria!"
     a_entry.delete(0,END)
     b_entry.delete(0,END)
     c_entry.delete(0, END)
@@ -98,10 +98,10 @@ Noun1 = Entry(win, textvariable = labelNoun)
 Fam = Entry(win, textvariable = labelFam)
 button1 = Button(win, text = "Show me the story!", command = clickStory)
 a_label = Label(win, text = "Here is your story: ")
-a_entry = Entry(win, width = 80, textvariable=eoutput, relief = FLAT)
-b_entry = Entry(win, width = 80, relief = FLAT)
-c_entry = Entry(win, width = 80, relief = FLAT)
-d_entry= Entry(win, width = 80, relief = FLAT)
+a_entry = Entry(win, width = 95, textvariable=eoutput, relief = FLAT)
+b_entry = Entry(win, width = 95, relief = FLAT)
+c_entry = Entry(win, width = 95, relief = FLAT)
+d_entry= Entry(win, width = 95, relief = FLAT)
 
 #adjectives code
 label1.grid(row = 1, column = 1, sticky = W)
@@ -122,12 +122,12 @@ Noun1.grid(row =5, column = 2)
 label5.grid(row = 6, column = 1, sticky = W)
 Fam.grid(row = 6, column = 2)
 #remainder
-button1.grid(row = 7, column = 2 )
-a_label.grid(row = 8, column = 1)
-a_entry.grid(row = 9, column = 1, columnspan = 5)
-b_entry.grid(row = 10, column = 1, columnspan = 5)
-c_entry.grid(row = 11, column = 1, columnspan = 5)
-d_entry.grid(row = 12, column = 1, columnspan = 5)
+button1.grid(row = 7, column = 2)
+a_label.grid(row = 8, column = 1, sticky = W)
+a_entry.grid(row = 9, column = 1, columnspan = 3)
+b_entry.grid(row = 10, column = 1, columnspan = 3)
+c_entry.grid(row = 11, column = 1, columnspan = 3)
+d_entry.grid(row = 12, column = 1, columnspan = 3)
 
 
 
