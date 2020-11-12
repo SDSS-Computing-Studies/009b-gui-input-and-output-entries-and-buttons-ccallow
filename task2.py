@@ -25,7 +25,7 @@ binput.set("b")
 cinput = StringVar()
 cinput.set("c")
 eoutput = StringVar()
-eoutput.set("Answers go here!")
+eoutput.set("Answer will be put here!")
 
 #instructions
 inst1 = Label (win, text = "Today we are going to factor trinomials. \n 1. Enter two values for the b-coefficient and c-coefficient. \n 2. Hit the factor button and the answer will appear. \n *** If you want to make the b or c values negative, select it in the dropmenu.*** \n      ", anchor = W, justify = LEFT)
@@ -101,9 +101,9 @@ def quadratic():
 
 #bottomcode
 bottomcode = Label(win, text = "\n ")
-button1 = Button(win, text = "The value of x: ", command = quadratic)
-a_entry = Entry(win, width = 40, textvariable=eoutput)
-b_entry = Entry(win, width = 40, text = " ")
+button1 = Button(win, text = "Solve!", command = quadratic)
+a_entry = Entry(win, width = 40, textvariable=eoutput, relief = FLAT)
+b_entry = Entry(win, width = 40, text = " ", relief = FLAT)
 
 #grid for instructions
 inst1.grid(row = 1, column = 1, columnspan = 15)
