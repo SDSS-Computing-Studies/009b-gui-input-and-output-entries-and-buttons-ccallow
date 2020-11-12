@@ -74,16 +74,36 @@ def quadratic():
         answer2 = (-b+math.sqrt(d))/(2)
     answer1 = round(answer1, 5)
     answer2 = round(answer2, 5)
+    if answer1 > 0:
+        v = answer1*(-1)
+        x = "(x " + str(v) + ")"
+    elif answer1 < 0:
+        v = answer1*(-1)
+        x = "(x + " + str(v) + ")"
+    elif answer == 0:
+        x = "(x)"
+    if answer2 > 0:
+        w = answer2*(-1)
+        y = "(x " + str(w) + ")"
+    elif answer2 < 0:
+        w = answer2*(-1)
+        y = "(x +" + str(w) + ")"
+    elif amswer == 0:
+        y = "(x)"
     answer1 = str(answer1)
     answer2 = str(answer2)
-    line = "The values of x:  " + answer1 +" and " + answer2
+    line = x +" " + y
+    line2 = "The values of x:  " + answer1 +" and " + answer2
     a_entry.delete(0,END)
     a_entry.insert(0, line)
+    b_entry.delete(0, END)
+    b_entry.insert(0, line2)
 
 #bottomcode
 bottomcode = Label(win, text = "\n ")
 button1 = Button(win, text = "The value of x: ", command = quadratic)
 a_entry = Entry(win, width = 40, textvariable=eoutput)
+b_entry = Entry(win, width = 40, text = " ")
 
 #grid for instructions
 inst1.grid(row = 1, column = 1, columnspan = 15)
@@ -101,6 +121,7 @@ centry.grid (row = 7, column = 6, sticky = E)
 bottomcode.grid (row = 8, column = 1)
 button1.grid(row = 9, column = 1)
 a_entry.grid(row = 10, column = 1, columnspan = 4, sticky = W)
+b_entry.grid(row = 11, column = 1, columnspan = 4, sticky = W)
 
 
 win.mainloop()
