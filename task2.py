@@ -88,7 +88,7 @@ def quadratic():
     elif answer2 < 0:
         w = answer2*(-1)
         y = "(x +" + str(w) + ")"
-    elif amswer == 0:
+    elif amswer2 == 0:
         y = "(x)"
     answer1 = str(answer1)
     answer2 = str(answer2)
